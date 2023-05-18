@@ -1,5 +1,14 @@
+.carousel-inner{
+    max-height: 450px;
+}
 .formContacto{
     margin-top: 15px;
     max-width: 600px;
 
+}
+
+#contenedor{
+    background-color: blue;
+    text-align: center;
+    font-size: 12px;
 }

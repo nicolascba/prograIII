@@ -1,4 +1,5 @@
-$.validator.setDefaults({
+//Validacion con Jquery
+/*$.validator.setDefaults({
     submitHandler: function(form){
         alert("Paso todo correctamente")
         form.sumbit();
@@ -67,4 +68,48 @@ $(function(){
 
         });
     }
-});
+});*/
+//Validacion con JS
+function validarFormulario(){
+    const txtNombre = document.getElementById("txtNombre")
+    const txtEmail = document.getElementById("email")
+    const txtContaseña = document.getElementById("password")
+    const txtConfirmar = document.getElementById("confirmarPassword")
+    const txtComentario = document.getElementById("comentarios")
+
+    if(txtNombre.value === ""){
+        alert("Ingrese un nombre")
+        return false;
+    }
+    if(txtEmail.value === ""){
+        alert("Ingrese un email")
+        return false;
+    }
+    if(txtContaseña.value === ""){
+        alert("Ingrese una contraseña!")
+        return false;
+        
+    }
+    if(txtContaseña.value != txtConfirmar.value){
+        alert("Las contraseñas deben coincidir")
+        return false;
+    }
+    if(txtComentario.value === ""){
+        alert("Ingrese un comentario!")
+        return false;
+    }
+    return true;
+}
+
+function guardar(){
+    if(validarFormulario()){
+        alert("Formulario enviado correctamente")
+    }
+    else{
+        alert("Error!")
+    }
+}
+
+function mostrarMensaje(){
+    console.log("Haz hecho click!")
+}
