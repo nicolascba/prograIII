@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #panel,#flip{
+            padding: 3px;
+            text-align: center;
+            background-color: moccasin;
+            border: solid 1px blue;
+        }
+        #panel{
+            padding: 30px;
+            display: none;
+
+        }
+    </style>
+</head>
+<body>
+    <dir id="flip">
+        click para hacer un slipup o down
+    </dir>
+    <dir id="panel">Hola programacion III</dir>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script> 
+        // A $( document ).ready() block.
+        $( document ).ready(function() {
+            $("#flip").click(function(){
+                $("#panel").slideToggle({
+                    left: '250px',
+                    height: '+=250px',
+                    with: '250px'
+                })
+            })
+        })
+    </script>
+</body>
+</html>

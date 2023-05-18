@@ -1,0 +1,14 @@
+body{
+    background-color: cyan;
+    border: 5px solid black;
+}
+
+.error{
+    color: red;
+    border: 4px sold white;
+}
+
+#primerParrafo{
+    color:lightblue;
+    display: flex;
+}

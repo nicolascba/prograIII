@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p class="clasePrimero" id="primero">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ea sequi consectetur possimus, esse tempore porro repellendus, rem minus nostrum, voluptates eligendi laboriosam deleniti? Molestiae minima nostrum pariatur nesciunt. Magni, voluptates!</p>
+    <p id="segundo">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat asperiores vitae, dolores veniam nobis quod consectetur dolor accusantium iure ex ipsam pariatur totam modi, ea explicabo ad illo, ullam ipsum?</p>
+   
+    <button id="ocultarMostrar">Ocultar o Mostrar</button>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script> 
+        // A $( document ).ready() block.
+        $( document ).ready(function() {
+            $("#ocultarMostrar").click(function(){
+                $("p").toggle()
+            })
+        })
+    </script>
+</body>
+</html>

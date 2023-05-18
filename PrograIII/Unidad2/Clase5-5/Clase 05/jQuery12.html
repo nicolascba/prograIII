@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Este es un ejemplo </p>
+
+
+    <button id="fakeIn">Realizar un FakeIn</button>
+    <br>
+    <button id="fakeOut">Realizar un FakeOut</button>
+    <br>
+    <button id="toggle">Realizar un toggle</button>
+    <br>
+    <button id="fakeTo">Realizar un fakeTo</button>
+    <br>
+    <div id="div1" style="width: 80px; height: 80px; display: none; background-color:red; ">
+        <p>Este es un ejemplo de FaceIn</p>
+    </div>
+    <div id="div2" style="width: 80px; height: 80px; display: none; background-color:green">
+        <p>Este es un ejemplo de FaceIn</p>
+    </div>
+    <div id="div3" style="width: 80px; height: 80px; display: none; background-color:black; ">
+        <p>Este es un ejemplo de FaceIn</p>
+    </div>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script> 
+        // A $( document ).ready() block.
+        $( document ).ready(function() {
+            $("#fakeIn").click(function(){
+                $("#div1").fakeIn()
+                $("#div2").fakeIn("slow")
+                $("#div3").fakeIn(3000)
+            })
+            $("#fakeOut").click(function(){
+                $("#div1").fakeIn()
+                $("#div2").fakeIn("slow")
+                $("#div3").fakeIn(3000)
+            })
+            $("#fakeIn").click(function(){
+                $("#div1").fakeIn("slow", 0.35)
+                $("#div2").fakeIn("slow", 0.4)
+                $("#div3").fakeIn("slow", 0.7)
+            })
+        })
+    </script>
+</body>
+</html>

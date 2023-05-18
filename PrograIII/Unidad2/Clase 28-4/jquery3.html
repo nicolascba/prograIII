@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <h2>Primer ejemplo jquery</h2>
+    <p class="clasePrimero" id="primero">Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi nam totam non eius voluptatibus, odit,
+    unde deserunt beatae accusantium ratione delectus nisi aliquam porro neque quis. Labore ex quo sunt.</p>
+    <p id="segundo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi nam totam non eius voluptatibus, odit,
+    unde deserunt beatae accusantium ratione delectus nisi aliquam porro neque quis. Labore ex quo sunt.</p>
+
+    <button>Haceme Click</button>
+
+    <script>       
+        $( document ).ready(function() {
+        console.log( "ready!" );
+            $("button").click(function(){
+                $(".clasePrimero").hide()
+            })
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,5 @@
+Manifiesto Restfull ver.
+
+serializar: convertir un objeto en un array de bits, el cual luego leemos con un json.
+deserializacion: convertimos ese array de bits en una lectura json.
+

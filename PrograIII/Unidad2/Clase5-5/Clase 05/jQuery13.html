@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Este es un ejemplo </p>
+
+
+    <button id="animacion">Realizar una animacion</button>
+    <br>
+
+    <p>este es un ejemplo de animacion</p>
+    <dir id="div1" style="background-color: purple; height: 100px; width: 100px; position: absolute;">
+    </dir>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script> 
+        // A $( document ).ready() block.
+        $( document ).ready(function() {
+            $("#animacion").click(function(){
+                $("#div1").animate("left 250px")
+            })
+        })
+    </script>
+</body>
+</html>

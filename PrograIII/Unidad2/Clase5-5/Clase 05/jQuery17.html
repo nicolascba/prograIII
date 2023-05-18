@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #panel,#flip{
+            padding: 3px;
+            text-align: center;
+            background-color: moccasin;
+            border: solid 1px blue;
+        }
+        #panel{
+            padding: 30px;
+            display: none;
+
+        }
+    </style>
+</head>
+<body>
+    <p id="p1">
+        <p id="parrafoEjemplo">este es un <n>parrafo</n> muy importante</p>
+        <button id="btn1">Mostrar textot</button>
+        <br>
+        <button id="btn2">Mostrar html</button>
+    </p>
+
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script> 
+        // A $( document ).ready() block.
+        $( document ).ready(function() {
+            $("#btn1").click(function(){
+                alert("Texto: "+ $("#p1").text())
+            })
+            $("#btn2").click(function(){
+                alert("Texto: "+ $("#p1").html())
+            })
+        })
+    </script>
+</body>
+</html>

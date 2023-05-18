@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!--BOOTSTRAP-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+   integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+   <!--Custom CSS-->
+   <link rel="stylesheet" href="/Tarea/interfaz.css">
+
+</head>
+<body>  
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Navbar</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Features</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Pricing</a>
+          </li>          
+        </ul>
+      </div>
+    </div>
+  </nav> 
+    <div class="container my-3" >
+      <div class="row">
+        <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4 py-4 bg-white">
+          <form>
+            <div class="mb-3">
+              <label for="nombre" class="form-label">Lenguaje</label>
+              <input type="text" class="form-control" id="nombre" placeholder="Lenguaje" autofocus>
+            </div>
+            <div class="mb-3">
+              <label for="descripcion" class="form-label">Descripción</label>
+              <textarea class="form-control" id="descripcion" placeholder="Descripción del Lenguaje" rows="3"></textarea>
+            </div>
+            <div class="mb-3">
+              <label for="programadores" class="form-label">Nro de Programadores</label>
+              <input type="number" class="form-control" id="programadores">
+            </div>
+            <div class="d-grid gap-2">
+              <button class="btn btn-success">Guardar</button>
+              <button class="btn btn-secondary">Limpiar</button>
+            </div>
+            
+          </form>
+          
+        </div>   
+        <div class="col-sm-12 col-md-8 col-lg-8 col-xl-8 bg-white">
+          <h2>Listado de Lenguajes</h2>
+          <table class="table table-striped table-dark">
+            <thead>
+              <tr>
+                <th class="centrado">#</th>
+                <th class="centrado">Lenguaje</th>
+                <th class="centrado">Cantidad de programadores</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="centrado">1</td>
+                <td class="centrado">JavaScript</td>
+                <td class="centrado">21</td>
+              </tr>
+              <tr>
+                <td class="centrado">2</td>
+                <td class="centrado">Phyton</td>
+                <td class="centrado">110</td>
+              </tr>
+              <tr>
+                <td class="centrado">3</td>
+                <td class="centrado">C#</td>
+                <td class="centrado">45</td>
+              </tr>
+              <tr>
+                <td class="centrado">4</td>
+                <td class="centrado">Ruby</td>
+                <td class="centrado">31</td>
+              </tr>              
+            </tbody>
+          </table>
+          
+        </div>      
+      </div>      
+    </div>
+    <!--Bootstrap JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>

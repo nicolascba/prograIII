@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    
+</head>
+<body>
+    
+    <div class="container">
+        <h3>Formulario</h3>
+        <form id="formulario">
+            <div class="form-grup">
+                <label for="txtNombre">Nombre</label>
+                <input type="text" class="form-control" name="nombre" id="txtNombre" placeholder="Ingrese su nombre">
+            </div>
+            <div class="form-grup ">
+                <label for="Email">Email</label>
+                <input type="email" class="form-control" id="Email" name="email">
+            </div>
+            <div class="form-grup ">
+                <label for="Password">Password</label>
+                <input type="password" class="form-control" id="Password" name="password">
+            </div>
+            <div class="form-grup ">
+                <label for="PasswoconfirmarPasswordrd">Confirmar Password</label>
+                <input type="password" class="form-control" id="confirmarPassword" name="confirmarPassword">
+            </div>
+            <div class="form-grup ">
+                <label for="comentarios">comentarios</label>
+                <textarea name="comentarios" id="comentarios" cols="40" rows="10" class="form-control" name="comentarios"></textarea>
+            </div>
+            <div class="form-grup ">
+                <label for="checkAceptar">
+                    <input type="checkbox" id="checkAceptar" value="aceptar" name="checkAceptar"
+                    Acepto los terminos y condiciones
+                </label>
+            </div>
+            <input type="submit" class="btn btn-primary" value="cargar" name="cargar">
+        </form>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/additional-methods.js"></script>
+    <script>
+        $.validator.setDefaults({
+            submitHandler: function(){
+                alert("Paso todo correctamente")
+            }
+        })
+        $.validator.addMethod("noEmpezarConGuion",function(value, element, param){
+            if(value.startWith(param)){
+                return false
+            }
+            else{
+                return true
+            }
+        })
+
+        $(document).ready(function(){
+            $("#formulario").validate({
+                rules: {
+                    nombre: {
+                        required: true,
+                        milnenght: 8,
+                        noEmpezarConGuion: "_"
+                    },
+                    email: {
+                        required: true,
+                        email: true
+                    },
+                    password: {
+                        required: true,
+                        milnenght: 8
+                    },
+                    confirmarPassword: {
+                        required: true,
+                        minlenght: 8,
+                        equalTo: '#Password'
+                    },
+                    checkAceptar: {
+                        required: true
+                    }
+                },
+                message: {
+                    nombre: {
+                        required: 'Por favor ingrese un nombre',
+                        minlenght: 'El nombre debe tener 8 caracteres',
+                        noEmpezarConGuion: "El nombre no puede empezar con guión"
+                    },
+                    email: {
+                        required: "El email es requerido",
+                        email: "Debe tener formato de email"
+                    },
+                    password: {
+                        required: "La contraseña es requerida",
+                        minlenght: "La contraseña debe tener 8 caracteres"
+                    },
+                    confirmarPassword: {
+                        required: "Debe confirmar la contraseña",
+                        minlenght: "Debe tener 8 caracteres",
+                        equalTo: 'Debe ser igual a la contraseña'
+                    },
+                    checkAceptar: {
+                        required: "Debe aceptar los terminos"
+                    }
+                },
+                errorClass: 'text-danger',
+                errorElement: "label"
+            })
+        })
+    </script>
+</body>
+</html>
+
+
+$.validator.addMethod("alphanumeric", function(value, element) {
+    return this.optional(element) || /^[a-zA-Z0-9]+$/.test(value);
+}, "El nombre debe ser alfanumérico");
+
+$(function(){
+    var $registerForm = $("#formulario");
+    $.validator.addMethod("noSpace", function(value, element){
+        return value == '' || value.trim().length != 0
+    });
+    if($registerForm.length){
+        $registerForm.validate({
+            rules:{
+                nombre:{
+                    required: true,
+                    alphanumeric: true,
+                    minlength: 8
+                },
+                email: {
+                    required: true,
+                    email: true
+                },
+                password: {
+                    required: true,
+                    minlenght: 8
+                },
+                confirmarPassword: {
+                    required: true,
+                    minlenght: 8,
+                    equalTo: '#Password'
+                },
+                checkAceptar: {
+                    required: true
+                }
+            },
+            messages: {
+                nombre: {
+                    required: 'Por favor ingrese un nombre',
+                    minlenght: 'El nombre debe tener 8 caracteres',
+                },
+                email: {
+                    required: "El email es requerido",
+                    email: "Debe tener formato de email"
+                },
+                password: {
+                    required: "La contraseña es requerida",
+                    minlenght: "La contraseña debe tener 8 caracteres"
+                },
+                confirmarPassword: {
+                    required: "Debe confirmar la contraseña",
+                    minlenght: "Debe tener 8 caracteres",
+                    equalTo: 'Debe ser igual a la contraseña'
+                },
+                checkAceptar: {
+                    required: "Debe aceptar los terminos"
+                }
+            },
+            errorClass: 'text-danger',
+            errorElement : 'label'
+        })
+    }
+
+})

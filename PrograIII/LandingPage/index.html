@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOOTSTRAP WEBSITE</title>
+    <!--Bootstrap CSS-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+     integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <!--Iconos FontAwesome-->
+    <script src="https://kit.fontawesome.com/071b3594b4.js" crossorigin="anonymous"></script>
+     <!--Custom CSS-->
+     <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <!--NAVEGACION-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container"> <!--Esta class container centra todo, le genera margenes en ambos costados-->
+            <a class="navbar-brand" href="/">
+                <img src="img/logo.png" alt="Fazt Logo" style="width: 20%;">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav ml-auto"> <!--ML-AUTO = Margin left auto-->
+                <li class="nav-item active">
+                  <a class="nav-link" href="#">About</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Equipo</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Contacto</a>
+                </li>
+              </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!--CABECERA-->
+    <header class="main-header">
+        <div class="background-overlay text-white py-5"> <!--py es padding-->
+          <div class="container">
+            <div class="row">
+              <div class="col-md-6 text-center justify-content-center align-self-center"> <!--Justifica y centra alineadamente todo-->
+                <h1>This is a title or phrase related to the product</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, doloribus.</p>
+                <a href="#" class="btn btn-outline-secondary btn-lg">
+                  Read More
+                </a>
+              </div>
+              <div class="col-md-6">
+                <img src="img/product.jpg" alt="Producto 1" class="img-fluid d-none d-sm-block">
+              </div>
+            </div>
+          </div>
+        </div>
+    </header>
+
+    <!--NewsLetter-->
+    <section class="bg-dark text-white py-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <input type="text" id="name" class="form-control form-control-lg" placeholder="Ingrese su nombre">
+          </div>
+          <div class="col-md-4">
+            <input type="email" id="email" class="form-control form-control-lg" placeholder="Ingrese su email">
+          </div>
+          <div class="col-md-4">
+            <button class="btn btn-primary btn-lg btn-block" id="sumbit"
+            onclick="suscribirse()">Suscribirse</button>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!--FEATURES-->
+    <section class="py-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3">
+            <div class="card text-center border-primary">
+              <div class="card-body">
+                <h3 class="">Feature One</h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et, provident.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card text-center bg-primary text-white">
+              <div class="card-body">
+                <h3 class="">Feature Two</h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et, provident.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card text-center border-primary">
+              <div class="card-body">
+                <h3 class="">Feature Three</h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et, provident.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card text-center bg-primary text-white">
+              <div class="card-body">
+                <h3 class="">Feature Four</h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et, provident.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--ABOUT-->
+    <section class="bg-light text text-center">
+      <div class="container">
+        <div class="row">
+          <div class="m-5">
+            <h3>Why this Product</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi veritatis similique ipsam
+               quo nobis ut rem, aut esse accusamus inventore fuga odio reiciendis tempore. Velit?</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--Acordeon-->
+    <section class="container text-center p-5">
+      <div class="row">
+        <div class="accordion" id="accordionExample">
+          <div class="card">
+            <div class="card-header" id="headingOne">
+              <h2 class="mb-0">
+                <button class="btn btn-link" type="button" data-toggle="collapse" 
+                data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                  Question One
+                </button>
+              </h2>
+            </div>
+
+            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+              <div class="card-body">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Error quo, delectus sapiente illo
+                , obcaecati quis, expedita praesentium magnam laboriosam beatae nulla. Illo corporis possimus fugit cupiditate?
+                 Ad, assumenda fugit saepe voluptates temporibus minima maxime ipsa totam! Animi dolor sint dolores!
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="headingOne">
+              <h2 class="mb-0">
+                <button class="btn btn-link" type="button" data-toggle="collapse" 
+                data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseOne">
+                  Question Two
+                </button>
+              </h2>
+            </div>
+            
+            <div id="collapseTwo" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+              <div class="card-body">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Error quo, delectus sapiente illo
+                , obcaecati quis, expedita praesentium magnam laboriosam beatae nulla. Illo corporis possimus fugit cupiditate?
+                 Ad, assumenda fugit saepe voluptates temporibus minima maxime ipsa totam! Animi dolor sint dolores!
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="headingOne">
+              <h2 class="mb-0">
+                <button class="btn btn-link" type="button" data-toggle="collapse" 
+                data-target="#collapseThree" aria-expanded="true" aria-controls="collapseOne">
+                  Question Three
+                </button>
+              </h2>
+            </div>
+            
+            <div id="collapseThree" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+              <div class="card-body">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Error quo, delectus sapiente illo
+                , obcaecati quis, expedita praesentium magnam laboriosam beatae nulla. Illo corporis possimus fugit cupiditate?
+                 Ad, assumenda fugit saepe voluptates temporibus minima maxime ipsa totam! Animi dolor sint dolores!
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--TEAM-->
+    <section class="team text-center">
+      <div class="container p-5">
+        <h1 class="text-white">Team</h1>
+        <p class="text-white">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores, repudiandae.</p>
+        <div class="row">
+          <!--Miembros equipo-->
+          <div class="col-lg-3">
+            <div class="card">
+              <div class="card-body">
+                <img src="/img/person.png" class="img-fluid rounded-circle w-50" alt="person">
+                <h3>John Carter</h3>
+                <p>Lorem ipsum dolor sit amet.</p>
+                <div class="d-flex flex-row justify-content-center"> <!--Centra cada icono que ponga-->
+                  <div class="p-4">
+                    <a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook"></i>
+                    </a>
+                  </div>
+                  <div class="p-4">
+                    <a href="https://www.twitter.com/" target="_blank"><i class="fa-brands fa-twitter"></i>
+                    </a>
+                  </div>
+                  <div class="p-4">
+                    <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3">
+            <div class="card">
+              <div class="card-body">
+                <img src="/img/person.png" class="img-fluid rounded-circle w-50" alt="person">
+                <h3>John Carter</h3>
+                <p>Lorem ipsum dolor sit amet.</p>
+                <div class="d-flex flex-row justify-content-center"> <!--Centra cada icono que ponga-->
+                  <div class="p-4">
+                    <a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook"></i>
+                    </a>
+                  </div>
+                  <div class="p-4">
+                    <a href="https://www.twitter.com/" target="_blank"><i class="fa-brands fa-twitter"></i>
+                    </a>
+                  </div>
+                  <div class="p-4">
+                    <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3">
+            <div class="card">
+              <div class="card-body">
+                <img src="/img/person.png" class="img-fluid rounded-circle w-50" alt="person">
+                <h3>John Carter</h3>
+                <p>Lorem ipsum dolor sit amet.</p>
+                <div class="d-flex flex-row justify-content-center"> <!--Centra cada icono que ponga-->
+                  <div class="p-4">
+                    <a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook"></i>
+                    </a>
+                  </div>
+                  <div class="p-4">
+                    <a href="https://www.twitter.com/" target="_blank"><i class="fa-brands fa-twitter"></i>
+                    </a>
+                  </div>
+                  <div class="p-4">
+                    <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3">
+            <div class="card">
+              <div class="card-body">
+                <img src="/img/person.png" class="img-fluid rounded-circle w-50" alt="person">
+                <h3>John Carter</h3>
+                <p>Lorem ipsum dolor sit amet.</p>
+                <div class="d-flex flex-row justify-content-center"> <!--Centra cada icono que ponga-->
+                  <div class="p-4">
+                    <a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook"></i>
+                    </a>
+                  </div>
+                  <div class="p-4">
+                    <a href="https://www.twitter.com/" target="_blank"><i class="fa-brands fa-twitter"></i>
+                    </a>
+                  </div>
+                  <div class="p-4">
+                    <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--Contacto-->
+    <section class="bg-light py-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-9">
+            <h3>Contacto</h3>
+            <p>Lorem ipsum dolor sit amet.</p>
+            <form action="" id="form1">
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <i class="fa-solid fa-user input-group-text"></i>
+                </div>
+                <input type="text" class="form-control" placeholder="Name" id="nomContacto">
+              </div>
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <i class="fa-solid fa-envelope input-group-text"></i>
+                </div>
+                <input type="text" class="form-control" placeholder="Email" id="emailContacto">
+              </div>
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <i class="fa-solid fa-pencil input-group-text"></i>
+                </div>
+                <textarea name="" id="textoContacto" cols="30" rows="10" placeholder="Write your message" class="form-control"></textarea>
+              </div>
+              <button class="btn btn-primary btn-lg btn-block" type="sumbit" id="enviar">Send your message</button>
+            </form>
+          </div>
+          <div class="col-lg-3 align-self-center">
+            <img src="img/logo.png" alt="logo">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--FOOTER-->
+    <footer>
+      <div class="container p-3 text-white text-center">
+        <p>Copyright &copy; 2023</p>
+      </div>
+    </footer>
+   
+
+    <!--Bootstrap JS-->
+    <script src="app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+</body>
+</html>

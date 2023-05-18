@@ -1,0 +1,25 @@
+.titulo{
+    font-size: 250%;
+    font-style: oblique;
+    color: black;
+}
+
+.subtitle{
+    color: rgb(0, 0, 0);
+    font-size: 150%;
+    font-style: italic;
+}
+
+.slide img {
+    height: 65vh;
+}
+.features-section {
+    margin-top: -50px;
+    padding: 0;
+}
+.acordeon-container{
+    padding-left: 0;
+    padding-right: 0;
+    width: 100%;
+    background-color: darkgrey;
+}

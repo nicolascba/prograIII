@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function inicializar(){
+            document.getElementById("primero").style.color = "green";
+        }
+        function inicializarDate(){
+            let anio = new Date().getFullYear()
+            document.getElementById(anio).value = anio //es una variable q te acepta todo
+            
+        }
+        window.addEventListener("load", inicializar)
+        document.addEventListener("DOMContentLoaded", inicializarDate)
+            
+    </script>
+</head>
+<body>
+    <p id="primero">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magni itaque architecto odio adipisci tempora sit!
+         Culpa dolores impedit commodi eius necessitatibus! Deserunt illo eaque labore fugit dolor quasi nulla excepturi.
+    </p>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magni itaque architecto odio adipisci tempora sit!
+        Culpa dolores impedit commodi eius necessitatibus! Deserunt illo eaque labore fugit dolor quasi nulla excepturi.
+   </p>
+   Año: <input type="text" id="anio">
+   
+</body>
+</html>

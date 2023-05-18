@@ -1,0 +1,7 @@
+Practico Parcial:
+-Hacer una pagina con bootstrapt
+-todo tiene que tener estilos
+-todo tiene que tener clases 
+-todo tiene que ser responsive
+-validaciones
+
